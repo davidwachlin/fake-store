@@ -1,0 +1,16 @@
+<div class="container">
+  <div>
+    <h1 class="title is-1">Products</h1>
+  </div>
+
+  <ul class="productList">
+    <li *ngFor="let product of products">
+      <app-product-card
+      [title]="product.title"
+      [imageUrl]="product.image"
+      [description]="product.description"
+    ></app-product-card>
+    </li>
+  </ul>
+</div>
+
