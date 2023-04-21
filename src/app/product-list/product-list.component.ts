@@ -47,7 +47,7 @@ const mockProducts: Product[] = [
   providers: []
 })
 export class ProductListComponent implements OnInit {
-  public products: any = []
+  public products: Product[] = []
   constructor(private productsService: ProductsService) {
 
   }
@@ -55,8 +55,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     console.log(this.productsService)
     this.productsService.fetchProducts().subscribe((data)=> {
-    console.log(data)
-    this.products = data;
+      this.products = data;
     });
   }
 

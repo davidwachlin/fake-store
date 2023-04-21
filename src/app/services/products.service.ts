@@ -1,6 +1,5 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
 
 const baseUrl = 'https://fakestoreapi.com/products';
 
@@ -24,6 +23,6 @@ export class ProductsService {
   constructor(private http: HttpClient) {}
 
   fetchProducts() {
-    return this.http.get<Product[]>('https://fakestoreapi.com/products')
+    return this.http.get<Product[]>(baseUrl)
   }
 }
